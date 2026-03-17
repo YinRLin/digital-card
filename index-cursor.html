@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>林映榕｜數位名片盒</title>
+    <meta
+      name="description"
+      content="林映榕的極簡互動式個人數位名片（Single Page）"
+    />
+    <link rel="preload" href="./assets/avatar.svg" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page" aria-label="我的數位名片盒">
+      <section class="card" aria-label="個人名片">
+        <header class="header">
+          <div class="avatarWrap">
+            <img
+              class="avatar"
+              src="./assets/avatar.svg"
+              width="144"
+              height="144"
+              alt="林映榕的大頭照"
+              loading="eager"
+              decoding="async"
+            />
+            <div class="ring" aria-hidden="true"></div>
+          </div>
+
+          <div class="titleWrap">
+            <h1 class="name">林映榕</h1>
+            <p class="tagline">台科大資安所｜碩二</p>
+          </div>
+        </header>
+
+        <p class="bio">我是台科大資安所碩二生。</p>
+
+        <nav class="actions" aria-label="社群連結">
+          <a
+            class="btn primary"
+            href="https://www.instagram.com/ivy.1121_/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="前往 Instagram（開新分頁）"
+          >
+            Instagram
+            <span class="btnIcon" aria-hidden="true">↗</span>
+          </a>
+
+          <button class="btn" type="button" data-action="github">
+            GitHub
+            <span class="btnIcon" aria-hidden="true">→</span>
+          </button>
+
+          <a class="btn" href="mailto:ivy@example.com" aria-label="寄信給我">
+            Email
+            <span class="btnIcon" aria-hidden="true">✉</span>
+          </a>
+        </nav>
+
+        <footer class="footer">
+          <button class="chip" type="button" data-action="copy">
+            複製我的 Email
+          </button>
+          <span class="hint" id="bgHint" aria-live="polite"></span>
+        </footer>
+      </section>
+
+      <div class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toastInner" id="toastText"></div>
+      </div>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
